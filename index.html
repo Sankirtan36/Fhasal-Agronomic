@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fhasal-Agronomic Factors </title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:wght@400;700;800&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="bg-black h-screen ">
+    <div class="slideshow bg-[url('../Assets/high2_reso.jpg')] h-[100%] w-full bg-cover bg-center bg-no-repeat">
+        <div class="nav_cont flex justify-center  ">
+            <nav class="navbar h-[57px] flex justify-between
+    items-center bg-orange-900 text-xl rounded-full w-2/3 m-2 shadow-lg shadow-black/40 px-2">
+                <div class="comp_div flex items-center mr-5 space-x-3">
+                    <img src="../Assets/logo.jpg " class="rounded-full" height="45" width="45">
+                    <span
+                        class="comp_name text-white sm:text-base text-[14px] font-semibold md:text-[17px] xl:text-xl font-['Bricolage Grotesque']">Fhasal-Agronomic</span>
+                </div>
+                <ul class="flex text-base space-x-3 p-3">
+                    <li class="l1 text-white text-[13px]  sm:text-[13px] md:text-[16px]">About</li>
+                    <li class="l2 text-white text-[13px]  sm:text-[13px] md:text-[16px]">Working</li>
+                    <li class="text-white"></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="cont w-full flex justify-center items-center ">
+   <!--###-->         <form action="{{url_for('predict')}}" method="post"
+                class="form shadow-lg mx-auto  p-3 bg-yellow-100 h-auto rounded-xl flex flex-col justify-center items-center gap-1  sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/3 mt-2 w-[70%] mb-5 ">
+                <h2 class=" text-base sm:text-lg xl:text-xl ">Enter the Conditions</h2>
+                
+                <div class="grid grid-cols-1  gap-y-2 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4 w-full">
+
+                    <div class="flex flex-col items-center w-full">
+                        <div class="flex items-start md:w-65 w-[85%]">
+                            <label for="nitrogen" class="block text-[14px] w-full text-left">Nitrogen</label>
+                        </div>
+                        <input id="nitrogen" class="border border-black border-2 h-9 p-2 rounded-lg w-[85%] md:w-65  sm:h-auto "
+                            type="text" name="nitrogen" placeholder="eg. 83">
+                    </div>
+
+                    <div class="w-full flex flex-col items-center">
+                        <div class="flex items-start md:w-65 w-[85%]">
+                            <label for="phosphorous" class="block  text-[14px]">Phosphorous</label>
+                        </div>
+                        <input id="phosphorous" class="border border-black border-2 h-9  p-2 rounded-lg md:w-65 w-[85%]  sm:h-auto"
+                            type="text" name="phosphorous" placeholder="eg. 43">
+                    </div>
+
+                    <div class="w-full flex flex-col items-center">
+                        <div class="flex items-start md:w-65 w-[85%]">
+                            <label for="potassium" class="block w-full text-[14px]">Potassium</label>
+                        </div>
+                        <input id="postassium" class="border border-black border-2 h-9 p-2 rounded-lg md:w-65 w-[85%]  sm:h-auto"
+                            type="text" name="postassium" placeholder="eg. 23">
+                    </div>
+
+                    <div class="w-full flex flex-col items-center">
+                        <div class="flex items-start md:w-65 w-[85%]">
+                            <label for="temperature" class="block text-[14px]">Temperature</label>
+                        </div>
+                        <input id="temperature" class="border border-black border-2 h-9 p-2 rounded-lg md:w-65 w-[85%]  sm:h-auto"
+                            type="text" name="temperature" placeholder="eg. 24.726598932" required>
+                    </div>
+
+                    <div class="w-full flex flex-col items-center ">
+                        <div class="flex items-start md:w-65 w-[85%]">
+                            <label for=" humidity" class="text-[14px] ">Humidity</label>
+                        </div>
+                        <input id="humidity" class="border border-black border-2 h-9 p-2 rounded-lg md:w-65 w-[85%]  sm:h-auto"
+                            type="text" name="Humidity" placeholder="eg. 82.14004101">
+                    </div>
+
+                    <div class="w-full flex flex-col items-center">
+                        <div class="flex items-start md:w-65 w-[85%]">
+                            <label for="ph" class="block text-[14px] ">Ph</label>
+                        </div>
+                        <input id="ph" class="border border-black border-2 p-2 h-9 rounded-lg md:w-65 w-[85%]  sm:h-auto" type="text"
+                            name="ph" placeholder="eg. 6.158376967">
+                    </div>
+
+                    <div class="w-full flex flex-col items-center sm:col-span-2">
+                        <div class="flex items-start md:w-65 w-[85%]">
+                            <label for="rainfall" class="block text-[14px] ">Rainfall</label>
+                        </div>
+                        <input id="rainfall" class="border h-9 border-black border-2 p-2 rounded-lg md:w-65 sm:h-auto w-[85%]"
+                            type="text" name="rainfall" placeholder="eg. 230.2242223">
+                    </div>
+
+                </div>
+                <div class="sm:w-[100%] w-full flex justify-center">
+                    <button class="p-2 mt-4 rounded-md text-white bg-green-600 w-1/2 font-semibold font-['Poppins']">Submit</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>
