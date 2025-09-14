@@ -17,10 +17,11 @@
     animation:bgSlide 20s infinite;
 }
 @keyframes bgSlide {
-  0%   { background-image: url('Assets/high1_reso.jpg'); }
-  33%  { background-image: url('Assets/high2_reso.jpg'); }
-  66%  { background-image: url('Assets/high3_reso.jpg'); }
-  100% { background-image: url('Assets/high4_reso.jpg'); }
+  0%   { background-image: url('./Assets/high1_reso.jpg'); }
+  33%  { background-image: url('./Assets/high2_reso.jpg'); }
+  66%  { background-image: url('./Assets/high3_reso.jpg'); }
+  100% { background-image: url('./Assets/high4_reso.jpg'); }
 
 }
+
 
